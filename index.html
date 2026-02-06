@@ -1,124 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EMM Bolivia | Escuela Mecánica de Motos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMM Bolivia | Escuela Mecánica de Motos</title>
 
-  <style>
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:#111; color:#fff; }
-    header img { width:100%; max-height:400px; object-fit:cover; }
-    section { padding:40px 20px; max-width:1100px; margin:auto; }
-    .title { text-align:center; font-size:32px; color:#ff2b2b; margin-bottom:30px; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
-    .card { background:#1c1c1c; padding:20px; border-radius:12px; }
-    .card h3 { color:#ff2b2b; }
-    .carousel { display:flex; gap:15px; overflow-x:auto; }
-    .carousel img { height:260px; border-radius:12px; }
-    .btn { display:inline-block; margin-top:10px; padding:10px 18px; background:#ff2b2b; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; }
-    footer { background:#000; text-align:center; padding:20px; font-size:14px; color:#aaa; }
-    .certificacion img { display:block; max-width:300px; margin:20px auto 0; }
-  </style>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#111;color:#fff;scroll-behavior:smooth}
+header img{width:100%;max-height:420px;object-fit:cover}
+section{padding:60px 20px;max-width:1100px;margin:auto}
+.title{text-align:center;font-size:34px;color:#ff2b2b;margin-bottom:25px}
+.subtitle{text-align:center;color:#ccc;margin-bottom:40px;font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#1b1b1b;padding:25px;border-radius:14px;box-shadow:0 0 15px rgba(0,0,0,.6);animation:fadeUp 1s ease}
+.card h3{color:#ff2b2b;margin-bottom:10px}
+.btn{display:inline-block;padding:14px 26px;background:#ff2b2b;color:#fff;text-decoration:none;border-radius:10px;font-weight:bold;transition:.3s}
+.btn:hover{background:#c40000;transform:scale(1.05)}
+.btn-inscribete{width:100%;padding:16px;font-size:18px;background:#25d366;border:none;color:#fff;border-radius:12px;font-weight:bold;cursor:pointer;animation:pulse 1.5s infinite}
+.carousel{display:flex;gap:15px;overflow-x:auto}
+.carousel img{height:260px;border-radius:14px}
+.sucursal{margin-bottom:35px}
+footer{background:#000;padding:25px;text-align:center;color:#aaa}
+.certificacion img{display:block;max-width:320px;margin:25px auto}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="banner-emm.png" alt="EMM Bolivia">
+<img src="banner-emm.png" alt="EMM Bolivia">
 </header>
 
-<!-- INFORMACIÓN -->
 <section>
-  <h2 class="title">Información del Curso</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>📚 Carrera Profesional</h3>
-      <p>Mecánica de Motocicletas</p>
-      <p>✔️ 3 módulos</p>
-      <p>✔️ Clases 100% prácticas</p>
-    </div>
-    <div class="card">
-      <h3>🕘 Lunes a Viernes</h3>
-      <p>Duración: <strong>3 meses</strong></p>
-      <p>2 horas por clase</p>
-    </div>
-    <div class="card">
-      <h3>🛠️ Solo Sábados</h3>
-      <p>Duración: <strong>4 meses</strong></p>
-      <p>4 horas por clase</p>
-    </div>
-  </div>
+<h2 class="title">ESCUELA MECÁNICA DE MOTOS – EMM BOLIVIA</h2>
+<p class="subtitle">
+Formamos mecánicos reales, no teóricos. En EMM aprendes trabajando con motos reales desde el primer día.
+</p>
+<div style="text-align:center">
+<a href="#inscripcion" class="btn">INSCRÍBETE AHORA</a>
+</div>
 </section>
 
-<!-- HORARIOS -->
 <section>
-  <h2 class="title">Horarios</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>⏰ Lunes a Viernes</h3>
-      <p><strong>Mañana ☀️</strong><br>08:00 – 10:00<br>10:00 – 12:00</p>
-      <p><strong>Tarde 🌅</strong><br>14:00 – 16:00<br>16:00 – 18:00</p>
-      <p><strong>Noche 🌘</strong><br>19:00 – 21:00</p>
-    </div>
-    <div class="card">
-      <h3>⏰ Solo Sábados</h3>
-      <p><strong>Mañana ☀️</strong><br>08:00 – 12:00</p>
-      <p><strong>Tarde 🌅</strong><br>14:00 – 18:00</p>
-    </div>
-  </div>
+<h2 class="title">Información del Curso</h2>
+<div class="cards">
+<div class="card">
+<h3>📚 Carrera Profesional</h3>
+<p>Mecánica de Motocicletas</p>
+<p>✔ 3 módulos</p>
+<p>✔ Clases 100% prácticas</p>
+</div>
+<div class="card">
+<h3>🕘 Lunes a Viernes</h3>
+<p>Duración: <strong>3 meses</strong></p>
+<p>2 horas por clase</p>
+</div>
+<div class="card">
+<h3>🛠 Solo Sábados</h3>
+<p>Duración: <strong>4 meses</strong></p>
+<p>4 horas por clase</p>
+</div>
+</div>
 </section>
 
-<!-- COSTOS -->
 <section>
-  <h2 class="title">Costos</h2>
-  <div class="cards">
-    <div class="card">
-      <p>Matrícula: <strong>Bs 150</strong> (única vez)</p>
-      <p>Mensualidad: <strong>Bs 550</strong></p>
-      <p>Guardapolvo: <strong>Bs 100</strong></p>
-      <p>✔️ Pago en cuotas</p>
-    </div>
-    <div class="card">
-      <h3>🔥 Pago al Contado</h3>
-      <p><strong>45% de descuento</strong></p>
-      <p><strong>Bs 1000</strong> por 3 meses</p>
-    </div>
-  </div>
+<h2 class="title">Horarios</h2>
+<div class="cards">
+<div class="card">
+<h3>☀️ Mañana</h3>
+<p>08:00 – 10:00</p>
+<p>10:00 – 12:00</p>
+</div>
+<div class="card">
+<h3>🌅 Tarde</h3>
+<p>14:00 – 16:00</p>
+<p>16:00 – 18:00</p>
+</div>
+<div class="card">
+<h3>🌙 Noche</h3>
+<p>19:00 – 21:00</p>
+</div>
+</div>
 </section>
 
-<!-- CERTIFICACIÓN -->
+<section>
+<h2 class="title">Costos</h2>
+<div class="cards">
+<div class="card">
+<h3>💰 Inscripción</h3>
+<p>Matrícula: Bs 150</p>
+<p>Mensualidad: Bs 550</p>
+<p>Guardapolvo: Bs 100</p>
+</div>
+<div class="card">
+<h3>🔥 Pago al Contado</h3>
+<p><strong>Bs 1000</strong></p>
+<p>3 meses</p>
+<p>45% DESCUENTO</p>
+</div>
+</div>
+</section>
+
 <section class="certificacion">
-  <h2 class="title">Certificación Oficial</h2>
-  <p style="text-align:center;">
-    Resolución Ministerial <strong>0168/2020</strong><br>
-    Único requisito: Carnet de Identidad
-  </p>
-  <img src="certificacion.png" alt="Certificación Oficial">
+<h2 class="title">Certificación Oficial</h2>
+<p class="subtitle">
+Resolución Ministerial <strong>0168/2020</strong><br>
+Único requisito: Carnet de Identidad
+</p>
+<img src="certificacion.png" alt="Certificación EMM">
 </section>
 
-<!-- GALERÍA -->
 <section>
-  <h2 class="title">Galería</h2>
-  <div class="carousel">
-    <img src="galeria2.jpg">
-    <img src="galeria3.jpg">
-    <img src="galeria4.jpg">
-    <img src="galeria5.jpg">
-    <img src="galeria6.jpg">
-    <img src="galeria7.jpg">
-    <img src="galeria8.jpg">
-    <img src="galeria9.jpg">
-    <img src="galeria10.jpg">
-    <img src="galeria11.jpg">
-    <img src="galeria12.jpg">
-    <img src="galeria13.jpg">
-    <img src="galeria14.jpg">
-  </div>
+<h2 class="title">Galería</h2>
+<div class="carousel">
+<img src="galeria2.jpg"><img src="galeria3.jpg"><img src="galeria4.jpg">
+<img src="galeria5.jpg"><img src="galeria6.jpg"><img src="galeria7.jpg">
+<img src="galeria8.jpg"><img src="galeria9.jpg"><img src="galeria10.jpg">
+<img src="galeria11.jpg"><img src="galeria12.jpg"><img src="galeria13.jpg">
+<img src="galeria14.jpg">
+</div>
+</section>
+
+<section>
+<h2 class="title">Sucursales</h2>
+
+<div class="sucursal">
+<h3>📍 Tarija</h3>
+<p>Calle Sevilla #0360</p>
+<a class="btn" href="https://maps.app.goo.gl/E8yttdTw89LYNH2Y7" target="_blank">Cómo llegar</a>
+</div>
+
+<div class="sucursal">
+<h3>📍 Sucre</h3>
+<p>Calle Eliodoro Camacho #151</p>
+<a class="btn" href="https://maps.app.goo.gl/6FzVyVNTaNLCd2xr5" target="_blank">Cómo llegar</a>
+</div>
+
+<div class="sucursal">
+<h3>📍 Cochabamba</h3>
+<p>Av. D'Orbigni #1173</p>
+<a class="btn" href="https://maps.app.goo.gl/iPDMHMMwtsVCC4oNA" target="_blank">Cómo llegar</a>
+</div>
+</section>
+
+<section id="inscripcion">
+<h2 class="title">Formulario de Inscripción</h2>
+
+<form onsubmit="enviarWhatsApp();return false;" style="max-width:520px;margin:auto">
+<input required placeholder="Nombre completo" id="nombre" style="width:100%;padding:14px;margin-bottom:12px;border-radius:10px;border:none">
+<input required placeholder="WhatsApp" id="telefono" style="width:100%;padding:14px;margin-bottom:12px;border-radius:10px;border:none">
+<select id="ciudad" required style="width:100%;padding:14px;margin-bottom:12px;border-radius:10px;border:none">
+<option value="">Ciudad</option><option>Tarija</option><option>Sucre</option><option>Cochabamba</option>
+</select>
+<select id="modalidad" required style="width:100%;padding:14px;margin-bottom:12px;border-radius:10px;border:none">
+<option value="">Modalidad</option><option>Lunes a Viernes</option><option>Solo Sábados</option>
+</select>
+<button class="btn-inscribete">ENVIAR INSCRIPCIÓN</button>
+</form>
 </section>
 
 <footer>
-  © 2026 EMM Bolivia – Escuela Mecánica de Motocicletas
+© 2026 EMM Bolivia – Escuela Mecánica de Motos
 </footer>
+
+<a href="https://wa.me/59168686625" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;
+padding:15px 22px;border-radius:50px;font-weight:bold;text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,.5)">WhatsApp</a>
+
+<script>
+function enviarWhatsApp(){
+let t=`INSCRIPCIÓN EMM BOLIVIA
+Nombre: ${nombre.value}
+WhatsApp: ${telefono.value}
+Ciudad: ${ciudad.value}
+Modalidad: ${modalidad.value}`;
+window.open("https://wa.me/59168686625?text="+encodeURIComponent(t));
+}
+</script>
 
 </body>
 </html>
