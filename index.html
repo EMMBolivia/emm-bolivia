@@ -6,88 +6,79 @@
 <title>EMM Bolivia | Escuela Mecánica de Motos</title>
 
 <style>
+html{scroll-behavior:smooth;}
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#111;
   color:#fff;
-  scroll-behavior:smooth;
 }
-
-/* NAV */
-nav{
-  background:#000;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-  padding:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,.7);
-}
-
-/* BOTONES */
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  background:linear-gradient(135deg,#ff2b2b,#b80000);
-  color:#fff;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:bold;
-  transition:.3s;
-}
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px rgba(255,43,43,.6);
-}
-
-/* HEADER */
 header img{
   width:100%;
   max-height:420px;
   object-fit:cover;
 }
-
-/* SECCIONES */
 section{
-  padding:60px 20px;
-  max-width:1100px;
+  padding:50px 20px;
+  max-width:1150px;
   margin:auto;
+  animation:fadeUp 1s ease;
+}
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
 }
 .title{
   text-align:center;
   font-size:34px;
   color:#ff2b2b;
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
-.subtitle{
-  text-align:center;
-  color:#ccc;
-  margin-bottom:35px;
-  font-size:18px;
+.index{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
 }
-
-/* CARDS */
+.index a{
+  padding:12px 20px;
+  background:#ff2b2b;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+.index a:hover{background:#fff;color:#ff2b2b;}
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  gap:20px;
 }
 .card{
   background:#1c1c1c;
   padding:25px;
   border-radius:14px;
-  box-shadow:0 0 15px rgba(0,0,0,.6);
-  animation:fadeUp 1s ease;
+  box-shadow:0 0 15px rgba(0,0,0,.5);
 }
-.card h3{
-  color:#ff2b2b;
+.card h3{color:#ff2b2b;}
+.btn-main{
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 28px;
+  background:linear-gradient(45deg,#ff2b2b,#ff6a00);
+  color:#fff;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  animation:pulse 2s infinite;
 }
-
-/* GALERIA */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
 .carousel{
   display:flex;
   gap:15px;
@@ -97,154 +88,119 @@ section{
   height:260px;
   border-radius:14px;
 }
-
-/* CERTIFICACION */
+.sucursal{
+  margin-bottom:30px;
+}
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  background:#ff2b2b;
+  color:#fff;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
 .certificacion img{
   display:block;
   max-width:320px;
-  margin:25px auto;
+  margin:20px auto;
 }
-
-/* FORM */
-form input, form select{
-  width:100%;
-  padding:14px;
-  margin-bottom:12px;
-  border-radius:10px;
-  border:none;
-}
-
-/* BOTON INSCRIPCION */
-.btn-inscribete{
-  width:100%;
-  padding:16px;
-  background:#25d366;
-  color:#fff;
-  border:none;
-  border-radius:12px;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-  animation:pulse 1.5s infinite;
-}
-
-/* FOOTER */
 footer{
   background:#000;
-  padding:25px;
   text-align:center;
+  padding:25px;
   color:#aaa;
 }
-
-/* ANIMACIONES */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.05)}
-  100%{transform:scale(1)}
+/* WhatsApp */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:26px;
+  text-decoration:none;
+  box-shadow:0 0 15px rgba(0,0,0,.5);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="btn" href="#inicio">Inicio</a>
-  <a class="btn" href="#informacion">Carrera</a>
-  <a class="btn" href="#horarios">Horarios</a>
-  <a class="btn" href="#costos">Costos</a>
-  <a class="btn" href="#certificacion">Certificación</a>
-  <a class="btn" href="#galeria">Galería</a>
-  <a class="btn" href="#sucursales">Sucursales</a>
-  <a class="btn" href="#inscripcion">Inscripción</a>
-</nav>
-
-<!-- HEADER -->
-<header id="inicio">
+<header>
   <img src="banner-emm.png" alt="EMM Bolivia">
 </header>
 
-<section id="informacion">
-<h2 class="title">ESCUELA MECÁNICA DE MOTOS – EMM BOLIVIA</h2>
-<p class="subtitle">
-Formamos mecánicos reales. Clases 100% prácticas desde el primer día.
-</p>
+<section id="inicio">
+<h2 class="title">Bienvenido a EMM Bolivia</h2>
+<div class="index">
+  <a href="#info">Curso</a>
+  <a href="#horarios">Horarios</a>
+  <a href="#costos">Costos</a>
+  <a href="#certificacion">Certificación</a>
+  <a href="#galeria">Galería</a>
+  <a href="#sucursales">Sucursales</a>
+</div>
+<div style="text-align:center">
+<a href="#formulario" class="btn-main">INSCRÍBETE AHORA</a>
+</div>
 </section>
 
-<section>
+<section id="info">
 <h2 class="title">Información del Curso</h2>
 <div class="cards">
 <div class="card">
-<h3>📚 Carrera Profesional</h3>
+<h3>📚 Carrera</h3>
 <p>Mecánica de Motocicletas</p>
-<p>✔ 3 módulos</p>
-<p>✔ Clases 100% prácticas</p>
+<p>✔️ 3 módulos</p>
+<p>✔️ Clases 100% prácticas</p>
 </div>
 <div class="card">
-<h3>🕘 Lunes a Viernes</h3>
-<p>Duración: <strong>3 meses</strong></p>
-<p>2 horas por clase</p>
+<h3>🕘 Modalidad</h3>
+<p>Lunes a Viernes</p>
+<p>Solo Sábados</p>
 </div>
 <div class="card">
-<h3>🛠️ Solo Sábados</h3>
-<p>Duración: <strong>4 meses</strong></p>
-<p>4 horas por clase</p>
+<h3>🛠️ Duración</h3>
+<p>3 a 4 meses</p>
 </div>
 </div>
 </section>
 
 <section id="horarios">
-<h2 class="title">Horarios de Clases</h2>
-<div class="cards">
+<h2 class="title">Horarios</h2>
 <div class="card">
-<h3>⏰ Lunes a Viernes</h3>
-<p><strong>Mañana ☀️</strong></p>
-<p>08:00 a 10:00</p>
-<p>10:00 a 12:00</p>
-<p><strong>Tarde 🌅</strong></p>
-<p>14:00 a 16:00</p>
-<p>16:00 a 18:00</p>
-<p><strong>Noche 🌘</strong></p>
-<p>19:00 a 21:00</p>
-</div>
-
-<div class="card">
-<h3>⏰ Sólo Sábados</h3>
-<p><strong>Mañana ☀️</strong></p>
-<p>08:00 a 12:00</p>
-<p><strong>Tarde 🌅</strong></p>
-<p>14:00 a 18:00</p>
-</div>
+<p><strong>Lunes a Viernes</strong></p>
+<p>☀️ 08:00 – 10:00 / 10:00 – 12:00</p>
+<p>🌅 14:00 – 16:00 / 16:00 – 18:00</p>
+<p>🌘 19:00 – 21:00</p>
+<hr>
+<p><strong>Solo Sábados</strong></p>
+<p>☀️ 08:00 – 12:00</p>
+<p>🌅 14:00 – 18:00</p>
 </div>
 </section>
 
 <section id="costos">
-<h2 class="title">Detalle del Costo</h2>
-<div class="cards">
+<h2 class="title">Costos</h2>
 <div class="card">
-<h3>🏷 Costos</h3>
-<p>Matrícula: <strong>Bs 150</strong></p>
-<p>Mensualidad: <strong>Bs 550</strong></p>
-<p>Guardapolvo: <strong>Bs 100</strong></p>
-<p>✔ Pago en cuotas</p>
-</div>
-<div class="card">
-<h3>🎁 Pago al Contado</h3>
-<p><strong>45% DESCUENTO</strong></p>
-<p><strong>Bs 1000</strong> (3 meses)</p>
-</div>
+<p>🏷 Matrícula: <strong>Bs 150</strong></p>
+<p>🏷 Mensualidad: <strong>Bs 550</strong></p>
+<p>🏷 Guardapolvo: <strong>Bs 100</strong></p>
+<p>✔️ Pago en cuotas</p>
+<p>🎁 <strong>45% descuento pago al contado</strong></p>
 </div>
 </section>
 
 <section id="certificacion" class="certificacion">
 <h2 class="title">Certificación Oficial</h2>
-<p class="subtitle">
-Resolución Ministerial <strong>0168/2020</strong><br>
-Único requisito: Carnet de Identidad
+<p style="text-align:center">
+<strong>ÚNICOS CON CERTIFICACIÓN MINISTERIAL REAL</strong><br><br>
+✔️ 1 Certificado de Egreso (Escuela)<br>
+✔️ 1 Certificado de Capacitación (Ministerio de Educación)<br>
+✔️ 1 Boletín de notas con Resolución Ministerial
 </p>
 <img src="certificacion.png" alt="Certificación">
 </section>
@@ -262,65 +218,26 @@ Resolución Ministerial <strong>0168/2020</strong><br>
 
 <section id="sucursales">
 <h2 class="title">Sucursales</h2>
-
-<div class="card">
-<h3>📍 Tarija</h3>
-<p>Calle Sevilla #0360</p>
-<a class="btn" href="https://maps.app.goo.gl/E8yttdTw89LYNH2Y7" target="_blank">Cómo llegar</a>
-</div><br>
-
-<div class="card">
+<div class="sucursal">
 <h3>📍 Sucre</h3>
-<p>Calle Eliodoro Camacho #151</p>
-<a class="btn" href="https://maps.app.goo.gl/Bqpya9FkLNSAcxFo6" target="_blank">Cómo llegar</a>
-</div><br>
-
-<div class="card">
-<h3>📍 Cochabamba</h3>
-<p>Av. D'Orbigni #1173</p>
-<a class="btn" href="https://maps.app.goo.gl/iPDMHMMwtsVCC4oNA" target="_blank">Cómo llegar</a>
+<p>Calle Eliodoro Camacho #151 – Zona Poconas</p>
+<a class="btn" href="https://maps.app.goo.gl/Bqpya9FkLNSAcxFo6" target="_blank">Ver ubicación</a>
 </div>
 </section>
 
-<section id="inscripcion">
+<section id="formulario">
 <h2 class="title">Formulario de Inscripción</h2>
-<form onsubmit="enviarWhatsApp();return false;" style="max-width:520px;margin:auto">
-<input id="nombre" placeholder="Nombre completo" required>
-<input id="telefono" placeholder="WhatsApp" required>
-<select id="ciudad" required>
-<option value="">Ciudad</option>
-<option>Tarija</option>
-<option>Sucre</option>
-<option>Cochabamba</option>
-</select>
-<select id="modalidad" required>
-<option value="">Modalidad</option>
-<option>Lunes a Viernes</option>
-<option>Sólo Sábados</option>
-</select>
-<button class="btn-inscribete">ENVIAR INSCRIPCIÓN</button>
-</form>
+<div class="card">
+<p>📲 Escríbenos por WhatsApp para inscribirte y asegurar tu cupo.</p>
+<a href="https://wa.me/591XXXXXXXX" class="btn-main">Contactar por WhatsApp</a>
+</div>
 </section>
 
 <footer>
-© 2026 EMM Bolivia – Escuela Mecánica de Motos
+© 2026 EMM Bolivia – Escuela Mecánica de Motocicletas
 </footer>
 
-<a href="https://wa.me/59168686625" target="_blank"
-style="position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;
-padding:15px 22px;border-radius:50px;font-weight:bold;text-decoration:none;
-box-shadow:0 0 15px rgba(0,0,0,.5)">WhatsApp</a>
-
-<script>
-function enviarWhatsApp(){
-let t=`INSCRIPCIÓN EMM BOLIVIA
-Nombre: ${nombre.value}
-WhatsApp: ${telefono.value}
-Ciudad: ${ciudad.value}
-Modalidad: ${modalidad.value}`;
-window.open("https://wa.me/59168686625?text="+encodeURIComponent(t));
-}
-</script>
+<a class="whatsapp" href="https://wa.me/591XXXXXXXX" target="_blank">💬</a>
 
 </body>
 </html>
