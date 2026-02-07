@@ -92,6 +92,40 @@ footer{
   color:#aaa;
 }
 
+
+/* CERTIFICACIÓN CENTRADA */
+.certificacion img{
+  display:block;
+  margin:30px auto;
+  max-width:320px;
+}
+
+/* CARRUSEL */
+.carousel{
+  overflow:hidden;
+  width:100%;
+  max-width:1000px;
+  margin:30px auto;
+  border-radius:15px;
+}
+.carousel-track{
+  display:flex;
+  animation:slide 45s linear infinite;
+}
+.carousel img{
+  width:100%;
+  max-width:1000px;
+  flex-shrink:0;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+/* 13 IMÁGENES = -1200% */
+@keyframes slide{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-1200%);}
+}
+  
 /* BOTÓN FLOTANTE WHATSAPP */
 .whatsapp-float{
   position:fixed;
@@ -196,8 +230,21 @@ footer{
 <section id="galeria">
 <h2 class="title">Galería</h2>
 <div class="carousel">
-<img src="galeria2.jpg"><img src="galeria3.jpg"><img src="galeria4.jpg">
-<img src="galeria5.jpg"><img src="galeria6.jpg"><img src="galeria7.jpg">
+  <div class="carousel-track">
+    <img src="galeria1.jpg">
+    <img src="galeria2.jpg">
+    <img src="galeria3.jpg">
+    <img src="galeria4.jpg">
+    <img src="galeria5.jpg">
+    <img src="galeria6.jpg">
+    <img src="galeria7.jpg">
+    <img src="galeria8.jpg">
+    <img src="galeria9.jpg">
+    <img src="galeria10.jpg">
+    <img src="galeria11.jpg">
+    <img src="galeria12.jpg">
+    <img src="galeria13.jpg">
+  </div>
 </div>
 </section>
 
