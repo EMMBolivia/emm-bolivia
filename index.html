@@ -283,7 +283,6 @@ footer{
 <option value="Cochabamba">Cochabamba</option>
 <option value="Tarija">Tarija</option>
 <option value="Sucre">Sucre</option>
-<option value="Otra">Otra ciudad</option>
 </select>
 
 <select id="modalidad" required>
@@ -304,7 +303,7 @@ footer{
 </footer>
 
 <!-- BOTÓN FLOTANTE -->
-<a href="https://wa.me/59170000000" class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/59168686625" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
 function enviarWhatsApp(){
@@ -319,15 +318,11 @@ function enviarWhatsApp(){
   if(ciudad==="Sucre") telefono="59173792251";
 
   let mensaje =
-  `Hola 👋, deseo inscribirme en *EMM Bolivia*%0A%0A`+
-  `👤 Nombre: ${nombre}%0A`+
-  `📱 WhatsApp: ${whatsapp}%0A`+
-  `📍 Ciudad: ${ciudad}%0A`+
-  `📚 Modalidad: ${modalidad}%0A%0A`;
-
-  mensaje += modalidad==="Lunes a Viernes"
-  ? `🕘 Horarios L-V:%0A☀️ 08:00–10:00 / 10:00–12:00%0A🌅 14:00–16:00 / 16:00–18:00%0A🌘 19:00–21:00`
-  : `🕘 Horarios Sábados:%0A☀️ 08:00–12:00%0A🌅 14:00–18:00`;
+  `Hola, deseo inscribirme en *EMM Bolivia*%0A%0A`+
+  `Nombre: ${nombre}%0A`+
+  `WhatsApp: ${whatsapp}%0A`+
+  `Ciudad: ${ciudad}%0A`+
+  `Modalidad: ${modalidad}%0A%0A`;
 
   window.open(`https://wa.me/${telefono}?text=${mensaje}`,"_blank");
 }
