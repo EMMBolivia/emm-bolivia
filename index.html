@@ -22,11 +22,6 @@ section{
   padding:50px 20px;
   max-width:1150px;
   margin:auto;
-  animation:fadeUp 1s ease;
-}
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
 }
 .title{
   text-align:center;
@@ -47,21 +42,12 @@ section{
   border-radius:25px;
   text-decoration:none;
   font-weight:bold;
-  transition:0.3s;
-}
-.index a:hover{background:#fff;color:#ff2b2b;}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
 }
 .card{
   background:#1c1c1c;
   padding:25px;
   border-radius:14px;
-  box-shadow:0 0 15px rgba(0,0,0,.5);
 }
-.card h3{color:#ff2b2b;}
 .btn-main{
   display:inline-block;
   margin-top:20px;
@@ -72,38 +58,14 @@ section{
   font-size:18px;
   font-weight:bold;
   text-decoration:none;
-  animation:pulse 2s infinite;
+  cursor:pointer;
 }
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.05);}
-  100%{transform:scale(1);}
-}
-.carousel{
-  display:flex;
-  gap:15px;
-  overflow-x:auto;
-}
-.carousel img{
-  height:260px;
-  border-radius:14px;
-}
-.sucursal{
-  margin-bottom:30px;
-}
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  background:#ff2b2b;
-  color:#fff;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.certificacion img{
-  display:block;
-  max-width:320px;
-  margin:20px auto;
+input, select{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
 }
 footer{
   background:#000;
@@ -121,7 +83,6 @@ footer{
   border-radius:50%;
   font-size:26px;
   text-decoration:none;
-  box-shadow:0 0 15px rgba(0,0,0,.5);
 }
 </style>
 </head>
@@ -129,99 +90,41 @@ footer{
 <body>
 
 <header>
-  <img src="banner-emm.png" alt="EMM Bolivia">
+<img src="banner-emm.png" alt="EMM Bolivia">
 </header>
 
 <section id="inicio">
 <h2 class="title">Bienvenido a EMM Bolivia</h2>
 <div class="index">
-  <a href="#informacion">Información</a>
-  <a href="#horarios">Horarios</a>
-  <a href="#certificacion">Certificación</a>
-  <a href="#galeria">Galería</a>
-  <a href="#sucursales">Sucursales</a>
+<a href="#informacion">Información</a>
+<a href="#horarios">Horarios</a>
+<a href="#costos">Costos</a>
+<a href="#sucursales">Sucursales</a>
+<a href="#formulario">Inscripción</a>
 </div>
 <div style="text-align:center">
 <a href="#formulario" class="btn-main">INSCRÍBETE AHORA</a>
 </div>
 </section>
 
-<section id="informacion">
-<h2 class="title">📝 Información del Curso</h2>
-<div class="card">
-<p><strong>Estudia una carrera profesional en MECÁNICA DE MOTOS</strong></p>
-<p>📚 El curso consta de <strong>3 módulos</strong></p>
-
-<hr>
-
-<p><strong>1️⃣ Modalidad Lunes a Viernes</strong></p>
-<p>📍 Duración: <strong>3 meses</strong></p>
-<p>✔️ 2 horas de clases</p>
-
-<hr>
-
-<p><strong>2️⃣ Modalidad Solo Sábados</strong></p>
-<p>📍 Duración: <strong>4 meses</strong></p>
-<p>✔️ 4 horas de clases</p>
-</div>
-</section>
-
-<section id="horarios">
-<h2 class="title">⏰ Horarios</h2>
-<div class="card">
-<p><strong>Modalidad Lunes a Viernes</strong></p>
-<p>☀️ 08:00 – 10:00 / 10:00 – 12:00</p>
-<p>🌅 14:00 – 16:00 / 16:00 – 18:00</p>
-<p>🌘 19:00 – 21:00</p>
-
-<hr>
-
-<p><strong>Modalidad Solo Sábados</strong></p>
-<p>☀️ 08:00 – 12:00</p>
-<p>🌅 14:00 – 18:00</p>
-</div>
-</section>
-
-<section id="certificacion" class="certificacion">
-<h2 class="title">Certificación Oficial</h2>
-<p style="text-align:center">
-<strong>ÚNICOS CON CERTIFICACIÓN MINISTERIAL REAL</strong><br><br>
-✔️ Certificado de Egreso (Escuela)<br>
-✔️ Certificado de Capacitación (Ministerio de Educación)<br>
-✔️ Boletín de notas con Resolución Ministerial
-</p>
-<img src="certificacion.png" alt="Certificación">
-</section>
-
-<section id="galeria">
-<h2 class="title">Galería</h2>
-<div class="carousel">
-<img src="galeria2.jpg"><img src="galeria3.jpg"><img src="galeria4.jpg">
-<img src="galeria5.jpg"><img src="galeria6.jpg"><img src="galeria7.jpg">
-</div>
-</section>
-
-<section id="sucursales">
-<h2 class="title">📍 Sucursales</h2>
-
-<div class="sucursal">
-<h3>📍 Cochabamba</h3>
-<p>Av. D'Orbigni #1173 casi esq. Humboldt, lado puente Cobija (acera Sud)</p>
-<a class="btn" href="https://maps.app.goo.gl/iPDMHMMwtsVCC4oNA" target="_blank">Ver ubicación</a>
-</div>
-
-<div class="sucursal">
-<h3>📍 Tarija</h3>
-<p>Calle Sevilla #0360, a una cuadra y media de Av. Las Américas</p>
-<a class="btn" href="https://maps.app.goo.gl/E8yttdTw89LYNH2Y7" target="_blank">Ver ubicación</a>
-</div>
-</section>
-
 <section id="formulario">
-<h2 class="title">Formulario de Inscripción</h2>
-<div class="card" style="text-align:center">
-<p>📲 Escríbenos por WhatsApp y asegura tu cupo</p>
-<a href="https://wa.me/591XXXXXXXX" class="btn-main">Contactar por WhatsApp</a>
+<h2 class="title">INSCRIPCIÓN EMM BOLIVIA</h2>
+<div class="card">
+<form onsubmit="enviarWhatsApp(); return false;">
+<input type="text" id="nombre" placeholder="Nombre completo" required>
+<input type="text" id="whatsapp" placeholder="WhatsApp" required>
+<input type="text" id="ciudad" placeholder="Ciudad" required>
+
+<select id="modalidad" required>
+<option value="">Selecciona modalidad</option>
+<option value="Lunes a Viernes">Lunes a Viernes</option>
+<option value="Solo Sábados">Solo Sábados</option>
+</select>
+
+<div style="text-align:center">
+<button type="submit" class="btn-main">Enviar Inscripción</button>
+</div>
+</form>
 </div>
 </section>
 
@@ -230,6 +133,36 @@ footer{
 </footer>
 
 <a class="whatsapp" href="https://wa.me/591XXXXXXXX" target="_blank">💬</a>
+
+<script>
+function enviarWhatsApp(){
+  const nombre = document.getElementById("nombre").value;
+  const whatsapp = document.getElementById("whatsapp").value;
+  const ciudad = document.getElementById("ciudad").value;
+  const modalidad = document.getElementById("modalidad").value;
+
+  let mensaje = `Hola 👋, deseo inscribirme en EMM Bolivia.%0A%0A` +
+                `👤 Nombre: ${nombre}%0A` +
+                `📱 WhatsApp: ${whatsapp}%0A` +
+                `📍 Ciudad: ${ciudad}%0A` +
+                `📚 Modalidad: ${modalidad}%0A%0A`;
+
+  if(modalidad === "Lunes a Viernes"){
+    mensaje += `🕘 Horarios disponibles:%0A` +
+               `☀️ Mañana: 08:00–10:00 / 10:00–12:00%0A` +
+               `🌅 Tarde: 14:00–16:00 / 16:00–18:00%0A` +
+               `🌘 Noche: 19:00–21:00`;
+  } else {
+    mensaje += `🕘 Horarios disponibles:%0A` +
+               `☀️ Mañana: 08:00–12:00%0A` +
+               `🌅 Tarde: 14:00–18:00`;
+  }
+
+  const telefono = "59168686625"; // CAMBIA AQUÍ TU NÚMERO
+  const url = `https://wa.me/${telefono}?text=${mensaje}`;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
