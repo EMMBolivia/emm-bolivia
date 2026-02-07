@@ -22,6 +22,11 @@ section{
   padding:50px 20px;
   max-width:1150px;
   margin:auto;
+  animation:fadeUp 1s ease;
+}
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
 }
 .title{
   text-align:center;
@@ -43,10 +48,12 @@ section{
   text-decoration:none;
   font-weight:bold;
 }
+.index a:hover{background:#fff;color:#ff2b2b;}
 .card{
   background:#1c1c1c;
   padding:25px;
   border-radius:14px;
+  box-shadow:0 0 15px rgba(0,0,0,.5);
 }
 .btn-main{
   display:inline-block;
@@ -57,8 +64,18 @@ section{
   border-radius:30px;
   font-size:18px;
   font-weight:bold;
-  text-decoration:none;
+  border:none;
   cursor:pointer;
+  text-decoration:none;
+}
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  background:#ff2b2b;
+  color:#fff;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 input, select{
   width:100%;
@@ -67,22 +84,31 @@ input, select{
   border-radius:8px;
   border:none;
 }
+.sucursal{margin-bottom:25px;}
 footer{
   background:#000;
   text-align:center;
   padding:25px;
   color:#aaa;
 }
-.whatsapp{
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
   color:#fff;
-  padding:15px 18px;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  font-size:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
   text-decoration:none;
+  box-shadow:0 0 15px rgba(0,0,0,.6);
+  z-index:1000;
 }
 </style>
 </head>
@@ -96,24 +122,100 @@ footer{
 <section id="inicio">
 <h2 class="title">Bienvenido a EMM Bolivia</h2>
 <div class="index">
-<a href="#informacion">Información</a>
-<a href="#horarios">Horarios</a>
-<a href="#costos">Costos</a>
-<a href="#sucursales">Sucursales</a>
-<a href="#formulario">Inscripción</a>
+  <a href="#informacion">Información</a>
+  <a href="#horarios">Horarios</a>
+  <a href="#costos">Costos</a>
+  <a href="#sucursales">Sucursales</a>
+  <a href="#formulario">Inscripción</a>
 </div>
 <div style="text-align:center">
-<a href="#formulario" class="btn-main">INSCRÍBETE AHORA</a>
+  <a href="#formulario" class="btn-main">INSCRÍBETE AHORA</a>
 </div>
 </section>
 
+<section id="informacion">
+<h2 class="title">📝 Información del Curso</h2>
+<div class="card">
+<p><strong>Carrera profesional en MECÁNICA DE MOTOS</strong></p>
+<p>📚 El curso consta de <strong>3 módulos</strong></p>
+<hr>
+<p><strong>Modalidad Lunes a Viernes</strong></p>
+<p>📍 Duración: 3 meses</p>
+<p>✔️ 2 horas de clases</p>
+<hr>
+<p><strong>Modalidad Solo Sábados</strong></p>
+<p>📍 Duración: 4 meses</p>
+<p>✔️ 4 horas de clases</p>
+</div>
+</section>
+
+<section id="horarios">
+<h2 class="title">⏰ Horarios</h2>
+<div class="card">
+<p><strong>Lunes a Viernes</strong></p>
+<p>☀️ Mañana</p>
+<p>08:00 – 10:00</p>
+<p>10:00 – 12:00</p>
+<p>🌅 Tarde</p>
+<p>14:00 – 16:00</p>
+<p>16:00 – 18:00</p>
+<p>🌘 Noche</p>
+<p>19:00 – 21:00</p>
+<hr>
+<p><strong>Solo Sábados</strong></p>
+<p>☀️ 08:00 – 12:00</p>
+<p>🌅 14:00 – 18:00</p>
+</div>
+</section>
+
+<section id="costos">
+<h2 class="title">🏷 Detalle del Costo</h2>
+<div class="card">
+<p>1️⃣ Matrícula: <strong>Bs 150</strong> (pago único)</p>
+<p>2️⃣ Mensualidad: <strong>Bs 550</strong> (cada mes)</p>
+<p>3️⃣ Guardapolvo: <strong>Bs 100</strong></p>
+<hr>
+<p>✔️ Puedes realizar el pago en cuotas</p>
+<p><strong>🎁 Beneficio pago al contado</strong></p>
+<p>45% de descuento lunes a viernes — <strong>Bs 1000</strong> (3 meses)</p>
+<p>40% de descuento solo sabados — <strong>Bs 1500</strong> (4 meses)</p>
+</div>
+</section>
+
+<section id="sucursales">
+<h2 class="title">📍 Sucursales</h2>
+
+<div class="sucursal card">
+<h3>Cochabamba</h3>
+<p>Av. D'Orbigni #1173 casi esq. Humboldt, puente Cobija (acera Sud)</p>
+</div>
+
+<div class="sucursal card">
+<h3>Tarija</h3>
+<p>Calle Sevilla #0360 a una cuadra y media de Av. Las Américas</p>
+</div>
+
+<div class="sucursal card">
+<h3>Sucre</h3>
+<p>Calle Eliodoro Camacho #151 entre Mejillones y 23 de Marzo – Zona Poconas</p>
+</div>
+</section>
+
+<!-- FORMULARIO AL FINAL -->
 <section id="formulario">
 <h2 class="title">INSCRIPCIÓN EMM BOLIVIA</h2>
 <div class="card">
 <form onsubmit="enviarWhatsApp(); return false;">
 <input type="text" id="nombre" placeholder="Nombre completo" required>
-<input type="text" id="whatsapp" placeholder="WhatsApp" required>
-<input type="text" id="ciudad" placeholder="Ciudad" required>
+<input type="text" id="whatsappAlumno" placeholder="WhatsApp" required>
+
+<select id="ciudad" required>
+<option value="">Selecciona tu ciudad</option>
+<option value="Cochabamba">Cochabamba</option>
+<option value="Tarija">Tarija</option>
+<option value="Sucre">Sucre</option>
+<option value="Otra">Otra ciudad</option>
+</select>
 
 <select id="modalidad" required>
 <option value="">Selecciona modalidad</option>
@@ -132,35 +234,33 @@ footer{
 © 2026 EMM Bolivia – Escuela Mecánica de Motocicletas
 </footer>
 
-<a class="whatsapp" href="https://wa.me/591XXXXXXXX" target="_blank">💬</a>
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/59170000000" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
 function enviarWhatsApp(){
   const nombre = document.getElementById("nombre").value;
-  const whatsapp = document.getElementById("whatsapp").value;
+  const whatsapp = document.getElementById("whatsappAlumno").value;
   const ciudad = document.getElementById("ciudad").value;
   const modalidad = document.getElementById("modalidad").value;
 
-  let mensaje = `Hola 👋, deseo inscribirme en EMM Bolivia.%0A%0A` +
-                `👤 Nombre: ${nombre}%0A` +
-                `📱 WhatsApp: ${whatsapp}%0A` +
-                `📍 Ciudad: ${ciudad}%0A` +
-                `📚 Modalidad: ${modalidad}%0A%0A`;
+  let telefono = "59168686625"; // Central
+  if(ciudad==="Cochabamba") telefono="59168686625";
+  if(ciudad==="Tarija") telefono="59175122344";
+  if(ciudad==="Sucre") telefono="59173792251";
 
-  if(modalidad === "Lunes a Viernes"){
-    mensaje += `🕘 Horarios disponibles:%0A` +
-               `☀️ Mañana: 08:00–10:00 / 10:00–12:00%0A` +
-               `🌅 Tarde: 14:00–16:00 / 16:00–18:00%0A` +
-               `🌘 Noche: 19:00–21:00`;
-  } else {
-    mensaje += `🕘 Horarios disponibles:%0A` +
-               `☀️ Mañana: 08:00–12:00%0A` +
-               `🌅 Tarde: 14:00–18:00`;
-  }
+  let mensaje =
+  `Hola 👋, deseo inscribirme en *EMM Bolivia*%0A%0A`+
+  `👤 Nombre: ${nombre}%0A`+
+  `📱 WhatsApp: ${whatsapp}%0A`+
+  `📍 Ciudad: ${ciudad}%0A`+
+  `📚 Modalidad: ${modalidad}%0A%0A`;
 
-  const telefono = "59168686625"; // CAMBIA AQUÍ TU NÚMERO
-  const url = `https://wa.me/${telefono}?text=${mensaje}`;
-  window.open(url, "_blank");
+  mensaje += modalidad==="Lunes a Viernes"
+  ? `🕘 Horarios L-V:%0A☀️ 08:00–10:00 / 10:00–12:00%0A🌅 14:00–16:00 / 16:00–18:00%0A🌘 19:00–21:00`
+  : `🕘 Horarios Sábados:%0A☀️ 08:00–12:00%0A🌅 14:00–18:00`;
+
+  window.open(`https://wa.me/${telefono}?text=${mensaje}`,"_blank");
 }
 </script>
 
